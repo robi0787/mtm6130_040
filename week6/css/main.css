@@ -10,6 +10,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: darkslategray;
+    /* ******************************************** */
     /* WEEK 6 NEW - 2 */
     /* adding background image */
     background-image: url(../images/white_brick_wall.png);
@@ -39,6 +40,11 @@ nav ul {
 nav ul a {
     color: darkslategray;
     text-decoration: none;
+/* ******************************************* */
+    /* WEEK 6 NEW - 4 */
+    font-size: 1.5rem;
+    /* 1.5rem * 16px = 24px */
+
 }
 
 /* Selecting element with ID value */
@@ -46,7 +52,9 @@ nav ul a {
 
 #treatoftheweek {
     /* background-color: cadetblue; */
+/* **************************************** */
     /* WEEK 6 NEW - 3 */
+
     /* background: cadetblue url(../images/bread.jpg) no-repeat 10px 20px; */
 
     /* background: cadetblue url(../images/bread.jpg) no-repeat 10% 20%; */
@@ -58,7 +66,21 @@ nav ul a {
 
     /* background-size: contain; */
     background-size: cover;
-    
+/* *************************************************** */
+    /* WEEK 6 NEW - 4.2 */
+    font-size: 1.25rem;
+    /* 1.25 * 16px = 20px */
+    padding: 1em; 
+    /* padding pushes the element away from the walls */
+    /* 1 * 20(element font size) = 20px */
+
+    /* viewport based unit */
+    /* width: 100vw; */
+    /* scroll wheel bc it has space coming from the parent, it goes out of the screen which is not ideal  */
+
+    /* height: 100vh; */
+    /* height is 100% of the browser size and dynamic */
+    width: 50%;
 }
 
 /* Selecting HTML elements with class name */
@@ -81,6 +103,7 @@ Direct Child Selector - will only select the direct child of the parent.
 */
 article>p {
     font-size: 24px;
+    /* ********************************************** */
     /* WEEK 6 NEW - 1*/
     /* CSS typography properties */
     font-weight: bold;
