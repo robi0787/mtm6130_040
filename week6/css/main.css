@@ -64,6 +64,13 @@ Direct Child Selector - will only select the direct child of the parent.
 */
 article>p {
     font-size: 24px;
+    /* WEEK 6 NEW - 1*/
+    /* CSS typography properties */
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: lowercase;
+    text-align: center;
+
 }
 
 /* Adjacent sibling selector - selects the element that is the very next sibling to the selected element, if any exists*/
