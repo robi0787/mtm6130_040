@@ -7,13 +7,45 @@
     Shortcut for adding the comment is control/command + forward slash 
 */
 
+
+
 body {
+    /* WEEK 7 part 5 nav */
+    padding-top: 92px;
+
+
     font-family: Arial, Helvetica, sans-serif;
     color: darkslategray;
     /* adding background image */
     background-image: url(../images/white_brick_wall.png);
 }
+/* ******************* WEEK 7 - Part 1 ***************************** */
+/* Box model example */
+section p {
+    width: 50%;
+    /* 
+        single value = top/bottom/left/right
+        2 values = first value- top/bottom | 2nd value- left/right
+    */
+    padding: 1em .5em;
+    /* top right bottom left */
+    margin: -1em 2em 2em 2em;
+    /* we can use single side margin, padding or border by adding -side. example border-top border-right etc.*/
+    /* margin-left: 4em; */
+    border-bottom: 2px solid black;
+}
 
+.container {
+    /* Always create a container containing everything inside the body tag */
+    max-width: 1200px;
+    /* top-bottom left-right */
+    margin: 0 auto;
+}
+/* Always create 100% width for images */
+img {
+    width: 100%;
+}
+/* ************************************************************ */
 h1 {
     color: cadetblue;
 }
@@ -33,13 +65,29 @@ nav ul {
     list-style: none;
 }
 
+/* *************WEEK 7 PART 2 ********************************************* */
+
+nav ul li {
+    display: inline-block;
+    /* show width 50% first */
+    width: 49%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+
+
+
 /* Selecting child elements multiple level */
 nav ul a {
+    /* ***************WEEK 7 part 2.2 ********************/
+    display: block;
+/* ******************************************************* */
+
     color: darkslategray;
     text-decoration: none;
     font-size: 1.5rem;
     /* 1.5rem * 16px = 24px */
-
 }
 
 /* Selecting element with ID value */
@@ -72,11 +120,36 @@ nav ul a {
     /* height: 100vh; */
     /* height is 100% of the browser size and dynamic */
     width: 50%;
+
+    position: relative;
+    padding: 1em 1em 4em 1em;
 }
+
+/* *************************WEEK 7 Part 5************************************************** */
+/* Position absolute */
+/* 0020 */
+.blue-link.large-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* **************************************************************************************** */
+
 
 /* Selecting HTML elements with class name */
 /* also add these styles to recipe */
 .blue-link {
+    /* ***********************WEEK 7 Part 3 ************************************************ */
+    /* em= 1.5 X font size */
+    /* overlaps and not pushing elements away bc it is inline element */
+    padding: 5em;
+    padding: 1.5em;
+    /* width wont work bc inline element. Need to add display block */
+    width: 300px;
+    display: block;
+/* ******************************************************************************************** */
+
     background-color: darkslategray;
     color: antiquewhite;
     text-decoration: none;
@@ -84,6 +157,33 @@ nav ul a {
 .large-text {
     font-size: 20px;
 }
+
+/*************************** WEEK 7 PART 4 ********************************************************/
+/* Example of Float layout */
+article,
+aside {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid black;
+    padding: 1.5em;
+    /* ensure that width does not exceed 80% */
+    box-sizing: border-box;
+    float: left;
+}
+
+aside {
+    width: 20%;
+}
+/* Fix this issue by selecting the section and give clear left or both or select the section and use clearfix */
+
+/* Clear float from sections */
+section {
+    clear: both;
+}
+/* **************************************************************************************************** */
+
+
+
 .white-text {
     color: antiquewhite;
 }
@@ -123,6 +223,18 @@ h3~p {
 
 [src$=".jpg"] {
     border: 4px solid darkslategray;
+}
+
+
+/* **************************WEEK 7 Part 5 ***************************************************** */
+/* fixed navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
 }
 
 /* Using Psuedo classes */
