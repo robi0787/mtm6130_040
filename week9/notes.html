@@ -1,0 +1,61 @@
+<!-- 
+    MOBILE FIRST 
+
+    When talking about layouts 
+        We are talking about how we use that space on a page.
+            desktop vs Mobile
+    
+    Mobile First means we style for mobile first.
+        Style for mobile first 
+        Proritize the content as mobile has less space 
+        Optimizing bandwidth. Mobile devices may use data and do not need a 3000px image etc. 
+        Optimizing for mobile less space, optimize the bandwidth and 
+    
+    Mobile design is always going to be in single column layout because of less space on screen. 
+        We wont see two columns 
+        We dont have to do anything special to create a default layout. or the mobile layout
+
+    Viewport Meta Tag
+        The very first thing we need to do for creating different sized displays
+            Add a meta tag inside the head of the document.
+            Give it 2 attributes. 
+                Name is the value of the information
+                Content what we want to tell the viewport. initial scale is one
+            What we are saying in this is
+                When this webpage loads on any device,
+                    the initial scale is 1 or the 100% width of the body is 100% of any device.
+            Use the meta tag to tell the browser that your page is responsive.   
+            
+    CSS MEDIA QUERIES
+    This is the second thing you will need when creating a responsive web design.
+        Set of rules that allows our browser to change the styles of our page based on different tags.
+        
+        You can focus on different styles within a media query
+            Screen width
+            pixel density 
+            or change the style for printing to remove items that you may not want to print.
+
+        There are always needed items that would be added to media query for it to work properly. 
+
+        1) @media starts the media query - tells the browser we are writing a media query
+        2) We want to define what media we are focusing on. @media that is a screen.
+        3) AND: we want MEdia to be a screen and inside the brackets we are defining the size of the screen.
+        4) Min-width we want the screen to be
+            These styles that we are creating will not take effect until the screen size of out web browser hits 650px
+        5) We add the curly brackets at the end of the brackets. 
+            Anything inside the curly brackets will only be applied to the min-width of 650px or above. 
+            These are not set widths, you can use any size you like. Based on your design.
+
+            Inside the curly brackets, we are using the same CSS rulesets that we have already learned. 
+            Everything will be the same that we have already been using but we are changing the styles for a different screen size. 
+                This may be larger font size due to being a larger screen or adding columns etc. 
+
+        Min-width:
+            It is best to use min-width when designing. 
+            Reason:
+                Always going from small screen size to large screen size. 
+                Max-width will stop working once you hit that specific point and default to original layout.
+                    After hitting that, the styles go back to original as if you didnt style it. 
+                IT is easier to use min width bc the styles will continue. 
+                <STAY AWAY FROM MAX WIDTH>
+ -->
