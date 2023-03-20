@@ -295,4 +295,8 @@ p {
         font-size: 1.5rem;
     }
 
+    .news .left h3 {
+        margin-top: 0;
+    }
+
 }
