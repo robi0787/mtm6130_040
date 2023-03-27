@@ -1,0 +1,45 @@
+/************************************************************
+                    Custom Styles
+*************************************************************/
+
+/* font-family: 'Playfair Display', serif;
+font-family: 'Source Code Pro', monospace; */
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+p {
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* Font AWesome */
+h2 i::before {
+    font-size: 3rem;
+}
+
+.fa-hippo::before {
+    font-size: 6rem;
+    color: crimson;
+}
+
+footer::before {
+    content: "hello";
+}
+
+footer::after {
+    content: "bye";
+}
+
+.map iframe {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}

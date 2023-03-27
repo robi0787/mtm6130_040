@@ -1,0 +1,163 @@
+<!-------------------------------------------------- 
+                HTML MOCKUP
+ --------------------------------------------------->
+
+ <!-- 
+    MOBILE FIRST
+    there is a hover on navigation items. Logo, nav and search are all apart of same NAV UL. Logo will be an anchor tag that will take you home. 
+
+-------------------About us:*****************************
+Mobile first design but always keep an eye on web.
+See that there is an image but about us and 2 paragraphs are beside it. Therefore these will be in 2 separate divs to easily style it for web. 
+
+-------------------Services:----------------
+-single item layout in mobile
+-grid layout in web. 
+Important to note the order. Order remains the same. 
+
+-------------------Our Team:----------------
+order does change. 
+img-text, img-text in mobile. 
+img-text, text-img in web. 
+
+-----------------Contact Us:----------------
+order is also changing.
+Form-Hours-location in mobile.
+Form-location-Hours in web. 
+How would we write this in HTML?
+Style in mobile first. Layout of HTML will go as Mobile. JUST IN CASE CODE BREAKS IT WILL DEFAULT TO MOBILE VIEW. 
+If it does break it would look odd to have img-text, text-img in the section of Our team. etc. If you follow the Desktop mockup to create html it will mess things up for you. 
+
+In mobile mockup there is no layout. It is top to bottom single column layout. 
+
+Use grid to change the order of the layout in web. 
+After a certain breakpoint, backgrounds bleed out to the edges. Cannot put all of code in a div bc footer and and banner have width of 100% no matter how big the browser. 
+
+indivdually add width to each div. 
+        Nav tag will not have a max width but UL will have a max width and margin 0 auto. 
+        banner section will not have a max width but UL will have a max width and margin 0 auto.
+
+
+IT IS ALWAYS GOOD TO HAVE BOTH MOBILE AND WEB MOCKUPS AVAILABLE TO VIEW
+
+First write html structure- head, body inside html tag. Add your folders for images and css. Create your title. Final assignment
+
+From top to bottom will be body tag. 
+    inside body will be header tag which will include:
+        Navigation- which can contain logo, UL and LI, Search Bar which will be a form and submit button magnifying glass.
+        banner inside the header
+
+        background of the nav extends all the way across but the content stays at a max-width. 
+            Nav will span 100% width
+                inside the nav you will have logo, UL and LI, Search Bar which will be a form\
+                    Since all are laid out in horizontal fashion, it will be easier to have all inside the UL. Logo, LI and search.
+                        Max width and margin 0 auto is applied to the UL. Which can be seen in the banner. The same max width and margin 0 auto on the banner.   
+
+First section we will do is the 
+*********header**************
+        LOGO- can have just the logo or have the color extend across. It was a glitch in the screenshot. either is fine. 
+        inside header we will have other elements. 
+
+        Nav will be inside the header. nav goes all the way across. But UL will have max width. 
+            Img-UL-Form that you can type in and should say search in the placeholder text and submit button. or ul all throughout with logo img-anchor tags-form inside UL as LIs.
+            Search action will be search, and the name will be site-search.  
+                This is an easy way to style using flexbox. 
+
+        Div class of banner which is the container and banner with bg image that spans 100%. The bg image will be added to css in part 2. 
+
+        Then internal div will have all the inforamation like h1, p, and anchor tag button with max width with heading, paragraph and anchor tag. 
+            You can give this div a class of info. In css you will give this an RBGA which will control the opacity of the info div.
+            It has the same max-width as the nav ul.
+                Outer containers do not have a max-width and stretch 100%. Internal containers have a max-width and margin 0 auto. This will be a recurring style. Since it is a recurring style, you can give all of these divs a second class name and in css have a style of max-width and margin 0 auto. 
+
+Main area goes from about us to the end of contact us or just before the footer. then multiple sections within the main. single page website with anchor tags jumping to each section.
+
+
+*************About us:******************
+Inside main. Section with a class of about. 
+        Even tho there is no background image there is a bg colour. The section also spans 100%
+        will have a class and an ID to enable that jump. 
+
+
+        Inside section with a class of about. 
+            Div called section-content or about-info something to enable that max width and margin 0 auto.
+            Inside that div container: This parent container will have a display of flex or grid. Display: flex or display grid with grid-template columns of 1fr 1fr. 
+                Img on one side then a div container with heading and 2 paragraphs inside one div to easily use flexbox.  
+
+        
+************Our Services:***************
+        Outer section of services that will contain everything with 100% width. Class and ID to allow jump from nav. 
+        inside section:
+            internal div that will contain information and have a max width and margin 0 auto.
+                5 cards, with an image and div with text and anchor tag. 
+                
+                WHAT SHOULD WE USE FOR THIS LAYOUT?
+                Using Grid, we need to figure out how many rows and columns. 
+                3 rows: heading, 2 cards, 3 cards. repeat (3, auto)
+                WITH COLUMNS WE WANT TO FOCUS ON THE SMALLEST PORTIONS WE CAN DO.
+                With 4 columns, it can work. 2fr 1fr 1fr 2fr but the middle column does not have the same width. OR you can add more columns and do 1fr across 6 columns. 
+
+                I RECOMMEND USING GRID AREA.
+                6 columns, but may run into issue. Grid areas: 
+                    head head head head head head
+                    Digital X3, marketing X3
+                    Video X2, Web X2, Print X2
+
+ ************** Vision:****************
+        Outer section with id and class, internal div with heading, paragraph and anchor tag button.
+        Same as banner. bg that extends width 100%. and internal div. 
+        Internal div will have a max-width and margin 0 auto.
+
+
+************** OUR TEAM:****************        
+        Our team section: Flex will be easier. each being 50% and change order. But you can use both flex and grid.
+            Outer section container with width 100% with internal div with max width and margin 0 auto:
+
+                heading [flex base 100%], 
+                image [flex base 50%] and div with headings and all text [flex base 50%]. 
+                image [flex base 50%, Order of 1] with div with headings and all text [flex base 50%]. 
+
+                For HTML, do not worry about the order. Just write HTML as mobile and when we style it, it will be ready bc we have created the proper container set up. 
+                    LAYOUT: Image - Text - IMAGE - Text
+
+                Grid Would be a 3 row and 2 column, select the bob rite div and give it a class (team2) and say grid column 1 / 2, row 2 / 3.
+
+
+***************Contact Us*******************
+    Outer section: width 100%
+        internal div of  with max width, margin 0.
+            Heading
+            Div with heading and form
+            div with heading and hours table
+            div with heading and map
+
+            can use flex or grid. Whatever works for you. 
+                Grid: 2 column, 3 row or use flex.
+
+        Each section will be their own divs. GROUP!
+            heading flex base 100%, 
+            form flex base 50%,  
+            location flexbase 50%
+            hours of operation flex base 100%, order 1
+
+
+*****************Footer:*****************
+        Footer section (outer)
+        with internal div max width margin 0
+            Paragraph with copyright symbol and info.
+
+
+I am not specifying a media query breakpoint size, But I used 900px as a breakpoint. For the max width maybe use 1000px or 1200px. 
+-->
+
+
+<!-- 
+*****************HTML EMBEDDING*****************
+
+
+
+ -->
+
+
+
+ 
